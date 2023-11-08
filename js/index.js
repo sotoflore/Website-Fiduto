@@ -1,6 +1,9 @@
 
+let slideIndex = 0;
+const slideHeight = document.querySelector('.card-slider').offsetHeight;
+const totalSlides = document.querySelectorAll('.cards .card-content').length;
 
-/*---- cambiar color de fondo del Header al dar scroll ----*/
+//---- cambiar color de fondo del Header al dar scroll ----
 function changeNabvarBackgroundColor(){
     let navBar = document.querySelector('.navbar');
     const isScrolled = window.scrollY > 50;
@@ -8,11 +11,7 @@ function changeNabvarBackgroundColor(){
 }
 window.addEventListener('scroll', changeNabvarBackgroundColor); 
 
-
-/*---- slider vertical de los testimonios ----*/
-let slideIndex = 0;
-const slideHeight = document.querySelector('.card-slider').offsetHeight;
-const totalSlides = document.querySelectorAll('.cards .card-content').length;
+//---- slider vertical de los testimonios ----
 function nextSlide() {
   slideIndex = (slideIndex + 1) % totalSlides;
   const offset = -slideIndex * slideHeight + 'px';
@@ -30,13 +29,13 @@ function nextSlide() {
     }, 500);
   }
 }
-setInterval(nextSlide, 2000); 
-/* corousel*/ 
+setInterval(nextSlide, 2000);
+
+//---------------- corousel ----------
 const imgContainer = document.querySelector('.img-container');
 const images = document.querySelectorAll('.img-container > div');
 
   imgContainer.innerHTML += imgContainer.innerHTML;
-
   let scrollAmount = 0;
     
 function scrollCarousel() {
@@ -49,3 +48,12 @@ function scrollCarousel() {
   requestAnimationFrame(scrollCarousel);
 }
 scrollCarousel();
+
+//--------- cerar menu -----------
+function closeNavbar() {
+    const navbar = document.querySelector('.navbar-collapse');
+    if (navbar.classList.contains('show')) {
+        navbar.classList.remove('show');
+    }
+}
+document.addEventListener('click', closeNavbar);

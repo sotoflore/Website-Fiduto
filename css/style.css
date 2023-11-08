@@ -114,7 +114,7 @@ body{
             url('/src/services/img-section-services.jpg') center 0 / cover no-repeat;
 }
 .our-services .bg-dark{
-margin-top: 13rem;
+    margin-top: 13rem;
 }
 /*------------- section services ------------------*/
 .img-container .col-6 {
@@ -139,8 +139,8 @@ margin-top: 13rem;
 }
 /* ----- ----- ICONO WHATSAPP----- ----- */
 .contact-whatsapp {
-    right: .6rem;
-    bottom: 1.25rem;
+    right: 1.2rem;
+    bottom: 1.2rem;
 }
 .icon-whatsapp {
     width: 4rem;
