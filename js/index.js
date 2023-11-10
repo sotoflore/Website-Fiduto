@@ -1,15 +1,6 @@
-
 let slideIndex = 0;
 const slideHeight = document.querySelector('.card-slider').offsetHeight;
 const totalSlides = document.querySelectorAll('.cards .card-content').length;
-
-//---- cambiar color de fondo del Header al dar scroll ----
-function changeNabvarBackgroundColor(){
-    let navBar = document.querySelector('.navbar');
-    const isScrolled = window.scrollY > 50;
-    isScrolled ? navBar.classList.add('bg-dark') : navBar.classList.remove('bg-dark');
-}
-window.addEventListener('scroll', changeNabvarBackgroundColor); 
 
 //---- slider vertical de los testimonios ----
 function nextSlide() {
@@ -48,12 +39,3 @@ function scrollCarousel() {
   requestAnimationFrame(scrollCarousel);
 }
 scrollCarousel();
-
-//--------- cerar menu -----------
-function closeNavbar() {
-    const navbar = document.querySelector('.navbar-collapse');
-    if (navbar.classList.contains('show')) {
-        navbar.classList.remove('show');
-    }
-}
-document.addEventListener('click', closeNavbar);
