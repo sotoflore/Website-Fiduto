@@ -65,7 +65,7 @@ body{
     height: 100vh;
     background: linear-gradient(rgba(12, 11, 12, 0.4),
     rgba(0, 0, 0, 0.4)),
-    url('src/img-section-about-us.jpg') center 0 / cover no-repeat;
+    url('/src/img-section-about-us.jpg') center 0 / cover no-repeat;
 }
 .content-about{
     padding-top: 10rem;
