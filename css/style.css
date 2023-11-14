@@ -36,9 +36,9 @@ body{
 .dropdown-item:hover {
     background-color: var(--color-primary);
 }
-.dropdown-center:hover .dropdown-menu {
+/* .dropdown-center:hover .dropdown-menu {
     display: block;
-}
+} */
 /*------------- section hero ------------------*/
 .section-hero{
     height: 100vh;
