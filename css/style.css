@@ -2,18 +2,13 @@
     --color-primary:#ff3e30;
     --color-secondary:#d5d5dc;
     --color-dark:#2a3652;
-    --text-success:#17C3B2;
-}
-@font-face {
-    font-family: 'ConfigAlt-Bold';
-    src: url('/fonts/ConfigAlt-Bold.otf') format('opentype');   
 }
 body{
     background-color: var(--color-secondary);
-    font-family: 'ConfigAlt-Bold', sans-serif;
+    font-family: 'Bitter', serif;
 }
-.text-success{
-    color: var(--text-success) !important;
+.text-danger{
+    color: var(--color-primary) !important;
 }
 .bg-dark{
     background-color: var(--color-dark) !important;
@@ -21,6 +16,9 @@ body{
 .btn-danger,
 .bg-danger{
     background-color: var(--color-primary) !important;
+}
+.text-justify{
+    text-align: justify;
 }
 /*------------- header ------------------*/
 .img-logo{
@@ -31,6 +29,15 @@ body{
     background-color: rgba(255, 255, 255, 0);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+}
+.dropdown-menu {
+    left: -100% !important;
+}
+.dropdown-item:hover {
+    background-color: var(--color-primary);
+}
+.dropdown-center:hover .dropdown-menu {
+    display: block;
 }
 /*------------- section hero ------------------*/
 .section-hero{
@@ -65,16 +72,13 @@ body{
     height: 100vh;
     background: linear-gradient(rgba(12, 11, 12, 0.4),
     rgba(0, 0, 0, 0.4)),
-    url('/src/img-section-about-us.jpg') center 0 / cover no-repeat;
+    url('../images/background-section-about-us.jpg') center 0 / cover no-repeat;
 }
 .content-about{
     padding-top: 10rem;
 }
 .list-group .list-item{
     list-style: none;
-}
-.list-group .bi-check2-circle{
-    color: yellow;
 }
 .section-about .sub_title::before {
     position: absolute;
@@ -97,21 +101,26 @@ body{
     aspect-ratio: 2/2;    
 }
 /*------------- section services ------------------*/
-.section-services .card{
-    height: 28rem;
+.card-content-service{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.section-services .card,
+.list-card-service .card{
     transition: all .3s ease-in-out;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
-.section-services .card-body{
-    margin-top: 12rem;
-}
-.section-services .card-body .card-title{
-    border-bottom: 5px solid var(--color-secondary);
+.card-service:hover {
+    cursor: pointer;
+    transform: scale3d(1.05, 1.05, 0.3);
+    -webkit-transform: scale3d(1.05, 1.05, 0.3);
+    -moz-transform: scale3d(1.05, 1.05, 0.3);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 .our-services{
     height: 100vh;
     background: linear-gradient(rgba(12, 11, 12, 0.4),
                 rgba(0, 0, 0, 0.4)),
-            url('/src/services/img-section-services.jpg') center 0 / cover no-repeat;
+            url('../images/background-section-services.jpg') center 0 / cover no-repeat;
 }
 .our-services .bg-dark{
     margin-top: 13rem;
@@ -125,8 +134,8 @@ body{
     width: fit-content;
 }
 /*------------- section testimonios ------------------*/
-.section-testimonials{
-    background-image: url('/src/background-section-testimonials.svg');
+.section-testimonials {
+    background-image: url('../images/background-section-testimonials.svg');
     background-position: center;
     background-size: auto;
 }
@@ -136,6 +145,12 @@ body{
 }
 .cards {
     transition: transform 0.5s ease-in-out;
+}
+.img-client-first{
+    width: 90%;
+}
+.img-client-penultimate{
+    width: 65%;
 }
 /* ----- ----- ICONO WHATSAPP----- ----- */
 .contact-whatsapp {
@@ -148,15 +163,14 @@ body{
     background-color: #1eeb0c;
 }
 .pulsing {
-
     box-shadow: 0 0 0 0 #1eeb0c;
-    animation: pl1 1s infinite;
+    animation: pulsing 1s infinite;
 }
-
-@keyframes pl1 {
-    100% {
-        box-shadow: 0 0 0 30px #0000
-    }
+@keyframes pulsing {
+    100% {box-shadow: 0 0 0 30px #0000}
+}
+.text-copy-footer{
+    font-size: .75rem;
 }
 /*----------------- responsive  ----------*/
 @media (max-width:376px){
@@ -170,7 +184,7 @@ body{
         font-size: 1.2rem;
     }
 }
-@media (max-width:767px){
+@media (max-width:768px){
     .section-about-us,
     .our-services{
         height: 100%;
@@ -191,6 +205,6 @@ body{
         height: 100%;
     }
     .btn-c {
-            width: 100% !important;
+        width: 100% !important;
     }
 }
