@@ -185,6 +185,9 @@ body{
     }
 }
 @media (max-width:768px){
+    .dropdown-menu {
+        background-color: transparent !important;
+    }
     .section-about-us,
     .our-services{
         height: 100%;
@@ -199,7 +202,7 @@ body{
         width: 100% !important;
     }
 }
-@media (min-width:767px) and (max-width:995px){
+@media (min-width:768px) and (max-width:995px){
     .section-about-us,
     .our-services{
         height: 100%;
