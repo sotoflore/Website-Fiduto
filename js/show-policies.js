@@ -1,3 +1,3 @@
 document.getElementById('mostrarPDF').addEventListener('click', function() {
-        window.open('../files/avisolegal.pdf', '_blank');
+        window.open('../files/avisoLegal.pdf', '_blank');
 });
