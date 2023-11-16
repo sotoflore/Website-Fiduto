@@ -13,6 +13,9 @@ body{
 .bg-dark{
     background-color: var(--color-dark) !important;
 }
+.bg-secondary{
+    background-color: var(--color-secondary) !important;
+}
 .btn-danger,
 .bg-danger{
     background-color: var(--color-primary) !important;
@@ -36,9 +39,6 @@ body{
 .dropdown-item:hover {
     background-color: var(--color-primary);
 }
-/* .dropdown-center:hover .dropdown-menu {
-    display: block;
-} */
 /*------------- section hero ------------------*/
 .section-hero{
     height: 100vh;
@@ -68,12 +68,11 @@ body{
     fill: var(--color-secondary);
 }
 /*------------- section about-us ------------------*/
-.section-about-us{
-    height: 100vh;
+.card-team{
     background: linear-gradient(rgba(12, 11, 12, 0.4),
     rgba(0, 0, 0, 0.4)),
-    url('../images/background-section-about-us.jpg') center 0 / cover no-repeat;
-}
+    url('../images/background-section-about-us.jpg') fixed center 0 / cover no-repeat;
+} 
 .content-about{
     padding-top: 10rem;
 }
@@ -87,18 +86,22 @@ body{
     height: 100%;
     background-color: var(--color-dark);
 }
+.our-team{
+    transform: translateY(-22%);
+}
 .our-team .card{
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    box-shadow: #000 0px 20px 30px -10px;
     transition: all .3s ease-in-out;
 }
 .our-team .card:hover{
     transform: translateY(-1rem);
+    cursor: pointer;
 }
 .section-about .sub_title span {
     color: var(--color-primary);
 }
-.img-person{
-    aspect-ratio: 2/2;    
+.section-about .card-team{
+    margin-top: 6rem;
 }
 /*------------- section services ------------------*/
 .card-content-service{
@@ -136,21 +139,19 @@ body{
 /*------------- section testimonios ------------------*/
 .section-testimonials {
     background-image: url('../images/background-section-testimonials.svg');
-    background-position: center;
-    background-size: auto;
-}
-.card-slider,
-.card-content {
-   height: 350px;
-}
-.cards {
-    transition: transform 0.5s ease-in-out;
+    background-position:bottom;
+    background-size: contain;
 }
 .img-client-first{
     width: 90%;
 }
 .img-client-penultimate{
     width: 65%;
+}
+.testimonial-img{
+    transform: translate(80%, -50%);
+    width: 8rem ;
+    height: 8rem;
 }
 /* ----- ----- ICONO WHATSAPP----- ----- */
 .contact-whatsapp {
@@ -188,7 +189,6 @@ body{
     .dropdown-menu {
         background-color: transparent !important;
     }
-    .section-about-us,
     .our-services{
         height: 100%;
     }
@@ -201,13 +201,24 @@ body{
     .btn-c{
         width: 100% !important;
     }
+    .our-team {
+        transform: translateY(0%);
+    }
+    .section-about .card-team{
+        margin-top: 2rem;
+    }
+    .section-testimonials {
+        background-image:initial;
+    }
 }
 @media (min-width:768px) and (max-width:995px){
-    .section-about-us,
     .our-services{
         height: 100%;
     }
     .btn-c {
         width: 100% !important;
+    }
+    .our-team {
+        transform: translateY(0%);
     }
 }
