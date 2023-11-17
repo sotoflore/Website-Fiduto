@@ -68,11 +68,6 @@ body{
     fill: var(--color-secondary);
 }
 /*------------- section about-us ------------------*/
-.card-team{
-    background: linear-gradient(rgba(12, 11, 12, 0.4),
-    rgba(0, 0, 0, 0.4)),
-    url('../images/background-section-about-us.jpg') fixed center 0 / cover no-repeat;
-} 
 .content-about{
     padding-top: 10rem;
 }
@@ -86,23 +81,11 @@ body{
     height: 100%;
     background-color: var(--color-dark);
 }
-.our-team{
-    transform: translateY(-22%);
-}
-.our-team .card{
-    box-shadow: #000 0px 20px 30px -10px;
-    transition: all .3s ease-in-out;
-}
-.our-team .card:hover{
-    transform: translateY(-1rem);
-    cursor: pointer;
-}
+
 .section-about .sub_title span {
     color: var(--color-primary);
 }
-.section-about .card-team{
-    margin-top: 6rem;
-}
+
 /*------------- section services ------------------*/
 .card-content-service{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -201,12 +184,6 @@ body{
     .btn-c{
         width: 100% !important;
     }
-    .our-team {
-        transform: translateY(0%);
-    }
-    .section-about .card-team{
-        margin-top: 2rem;
-    }
     .section-testimonials {
         background-image:initial;
     }
@@ -217,8 +194,5 @@ body{
     }
     .btn-c {
         width: 100% !important;
-    }
-    .our-team {
-        transform: translateY(0%);
     }
 }
